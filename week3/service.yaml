@@ -1,0 +1,9 @@
+---
+- hosts: uml
+  tasks:
+    - name: Start service crond, if not started
+      service:
+        name: crond
+        state: started
+      become: yes
+
